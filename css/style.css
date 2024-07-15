@@ -1,0 +1,171 @@
+:root{
+    --narrow: "PT Sans Narrow", sans-serif;
+    --protest: "Protest Riot", sans-serif;
+    --noto: "Noto Sans", sans-serif;
+    --btn: #ffd166;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #caffbf;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+.todo_app{
+    width: 40%;
+    padding: 30px;
+    background: #2d6a4f;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 18px 12px 42px -7px rgba(40,30,30,0.81);
+    -webkit-box-shadow: 18px 12px 42px -7px rgba(40,30,30,0.81);
+    -moz-box-shadow: 18px 12px 42px -7px rgba(40,30,30,0.81);
+}
+.heading{
+    position: relative;
+    color: #fff;
+    font-family: var(--protest);
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    line-height: 0.8;
+    margin-bottom: 40px;
+}
+.heading::after{
+    position: absolute;
+    content: "";
+    width: 161px;
+    height: 2px;
+    left: 193px;
+    bottom: -13px;
+    background: #fff;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    /* background: #0d1b2a; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+.inputBox input{
+    width: 100%;
+    border: 3px solid rgb(1, 247, 235);
+    border-radius: 15px;
+    outline: none;
+    background: transparent;
+    padding: 18px;
+    margin-right: 20px;
+    line-height: 0.8;
+    color: #FFF;
+    letter-spacing: 0.18rem;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--protest);
+    transition: all linear 0.3s;
+    z-index: 1;
+}
+.inputBox span{
+    position: absolute;
+    left: 20px;
+    line-height: 0.8;
+    color: var(--btn);
+    opacity: 0.7;
+    letter-spacing: 0.18rem;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--protest);
+    text-transform: capitalize;
+    transition: all linear 0.3s;
+}
+.inputBox input:focus{
+    border: 3px solid rgb(240, 163, 163);
+}
+.inputBox input:focus ~span{
+    background: #2d6a4f;
+    transform: translate(-18px,-31px);
+    color: rgb(240, 163, 163);
+    font-size: 14px;
+    left: 40px;
+    z-index: 999;
+}
+.inputBtn{
+    padding: 18px 35px;
+    border-radius: 30px;
+    border: 5px solid transparent;
+    background: #ffd166;
+    color: #1b263b;
+    font-family: var(--protest);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+.updateBtn{
+    background: #7ae72c;
+}
+.inputBtn:active{
+    border: 5px solid rgb(240, 163, 163);
+    transform: scale(0.95);
+}
+
+.warning{
+    color: red;
+    font-family: var(--narrow);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin: 2px 8px;
+    display: none;
+}
+ul,ol{
+    list-style: none;
+}
+.itemBox{
+    position: relative;
+    margin: 40px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 2fr 2fr;
+    align-items: center;
+    gap: 32px;
+}
+.unchecked, .checked{
+    font-size: 22px;
+    color: var(--btn);
+    cursor: pointer;
+    transition: all linear 0.1s;
+}
+
+.unchecked:hover, .checked:hover{
+    font-size: 27px;
+
+    
+}
+.itemBox li{
+    font-size: 22px;
+    font-family: var(--noto);
+    color: #fff;
+    font-weight: 600;
+}
+.checkedItemList{
+    text-decoration: line-through;
+}
+.editBtn,.deleteBtn{
+    color: var(--btn);
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all linear 0.1s;
+}
+.editBtn:hover, .deleteBtn:hover{
+    font-size: 27px;
+}
+
